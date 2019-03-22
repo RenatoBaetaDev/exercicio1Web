@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt">
+  	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Mangas</title>
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/white.css" rel="stylesheet" id="theme">
+
+	</head>
+  	<body>
+		<div class="row">
+			<div class="col-md-12">
+				<nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-light bg-light navbar-dark bg-dark justify-content-between">
+					
+					<div>
+						<a onclick="mostrarPagina()" href="#" role="button" class="btn btn-info" >Home</a>
+						<a onclick="mostrarPagina('mangas.html')" href="#" role="button" class="btn btn-info" >Mangas</a>
+						<a onclick="mostrarPagina('contact.html')" href="#" role="button" class="btn btn-info" >Contact</a>
+						<a onclick="mostrarPagina('about.html')" href="#" role="button" class="btn btn-info" >About</a>	
+					</div>
+
+					<div >
+						<a href="#modalLogin" role="button" class="btn btn-primary" data-toggle="modal">Login</a> 
+						<a onclick="mostrarPagina('cadastro.html')" role="button" class="btn btn-outline-success" >Register</a> 
+						<!-- <a id="changeTheme" onclick="mudarTema()" role="button" class="btn btn-secondary btn-outline-dark" >Dark Mode</a>  -->
+					</div>
+				
+				</nav>
+		
+			</div>
+		</div>
+
+
+		<div class="modal fade" id="modalLogin" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="myModalLabel">
+								Login
+							</h5> 
+							<button type="button" class="close" data-dismiss="modal">
+								<span aria-hidden="true">×</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<form role="form">
+								<div class="form-group">
+									
+									<label for="exampleInputEmail1">
+										Email address
+									</label>
+									<input type="email" class="form-control" id="emailLogin" required>
+								</div>
+								<div class="form-group">
+									
+									<label for="exampleInputPassword1">
+										Password
+									</label>
+									<input type="password" class="form-control" id="passwordLogin" required>
+								</div>
+											
+								<button type="submit" class="btn btn-success">
+									Login
+								</button>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">
+								Cancel
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>    
+
+		<br><br><br>
+		<div id="content">
+				
+		</div>
+
+
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/scripts.js"></script>
+			
+	</body>
+</html>    
+
+<script>
+	mostrarPagina();
+
+	function mostrarPagina(pagina = "principal.html"){
+		$("#content").html("");
+		$("#content").load(pagina); 
+	}
+
+	// function mudarTema(){		
+	// 	$("#changetheme").html("");
+	// 	var atual = document.getElementById("theme").getAttribute("href");
+	// 	var tema = "";
+	// 	var html = "";
+	// 	var button = "";
+
+	// 	if ( atual != "css/white.css" ){
+	// 		tema = "white.css";
+	// 		html = "Dark Mode";
+	// 		button = "btn btn-secondary btn-outline-dark";
+	// 	}else{
+	// 		tema = "black.css";
+	// 		html = "Light Mode";
+	// 		button = "btn btn-outline-primary";
+	// 	}
+		
+	// 	document.getElementById("theme").setAttribute("href", "css/"+tema);
+	// 	document.getElementById("changeTheme").setAttribute("class", button);
+	// 	document.getElementById("changeTheme").innerHTML = html;
+	// }
+</script>
+
