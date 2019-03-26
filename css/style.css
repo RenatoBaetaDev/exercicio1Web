@@ -5,7 +5,6 @@
 
 body {
     background-image: url(../img/bleach.jpg);
-    background-color: rgb(0, 0, 0);
     color: white;
 }
 
@@ -22,9 +21,14 @@ body {
     opacity: 0.9;
 }
 
-
-
 .carousel-caption > h4 > a:hover{
     color: white;
 }
 
+#listaMangas {
+    padding: 10px;
+}
+
+#listaMangas fieldset {
+    border: 0px;
+}
