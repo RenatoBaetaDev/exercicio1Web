@@ -14,3 +14,17 @@ body {
     background-color: black;
     opacity: 0.7;
 }
+
+#cadastro , #login {
+    border: 2px solid black;
+    border-radius: 5%;
+    background-color: black;
+    opacity: 0.9;
+}
+
+
+
+.carousel-caption > h4 > a:hover{
+    color: white;
+}
+

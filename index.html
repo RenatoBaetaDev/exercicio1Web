@@ -36,43 +36,42 @@
 
 
 		<div class="modal fade" id="modalLogin" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="myModalLabel">
+			<div class="modal-dialog" id="login"role="document">
+				<div id="login" class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="myModalLabel">
+							Login
+						</h5> 
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form  role="form">
+							<div class="form-group">
+								
+								<label for="exampleInputEmail1">
+									Email address
+								</label>
+								<input type="email" class="form-control" id="emailLogin" required>
+							</div>
+							<div class="form-group">
+								
+								<label for="exampleInputPassword1">
+									Password
+								</label>
+								<input type="password" class="form-control" id="passwordLogin" required>
+							</div>
+										
+							<button type="submit" class="btn btn-success">
 								Login
-							</h5> 
-							<button type="button" class="close" data-dismiss="modal">
-								<span aria-hidden="true">×</span>
 							</button>
-						</div>
-						<div class="modal-body">
-							<form role="form">
-								<div class="form-group">
-									
-									<label for="exampleInputEmail1">
-										Email address
-									</label>
-									<input type="email" class="form-control" id="emailLogin" required>
-								</div>
-								<div class="form-group">
-									
-									<label for="exampleInputPassword1">
-										Password
-									</label>
-									<input type="password" class="form-control" id="passwordLogin" required>
-								</div>
-											
-								<button type="submit" class="btn btn-success">
-									Login
-								</button>
-							</form>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">
-								Cancel
-							</button>
-						</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">
+							Cancel
+						</button>
 					</div>
 				</div>
 			</div>
@@ -95,7 +94,7 @@
 <script>
 	mostrarPagina();
 
-	function mostrarPagina(pagina = "principal.html"){
+	function mostrarPagina(pagina = "principal.html", elemento=""){
 		$("#content").html("");
 		$("#content").load(pagina); 
 	}
