@@ -7,10 +7,12 @@
 
 	<title> Nameless Mangas </title>
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/white.css" rel="stylesheet" id="theme">
 	<link rel="icon" type="imagem/png" href="img/bleach.jpg" />
+	
 
 </head>
 
@@ -23,7 +25,6 @@
 				<div>
 					<a onclick="mostrarPagina()" href="#" role="button" class="btn btn-info">Home</a>
 					<a onclick="mostrarPagina('mangas.html')" href="#" role="button" class="btn btn-info">Mangas</a>
-					<a onclick="mostrarPagina('contact.html')" href="#" role="button" class="btn btn-info">Contact</a>
 					<a onclick="mostrarPagina('about.html')" href="#" role="button" class="btn btn-info">About</a>
 				</div>
 
@@ -87,6 +88,46 @@
 
 	</div>
 
+	<br><br>
+
+	<div class="page-footer blue pt-4  navbar-dark bg-dark">
+		<div class="row text-center">
+			<div class="col-md-4">
+				<p >
+					Location: <br>
+					Street: 77 Massachusetts <br> 
+					Ave Cambridge, MA 02139, EUA	
+				</p>			
+			</div>
+			<div class="col-md-4">
+				Contact <br>
+				Phone: 9999999999 <br>
+				E-mail: namelessMangas@email.com
+
+				<div class="footer-copyright text-center py-3">&copy; 2019 Copyright:
+						<a onclick="mostrarPagina('about.html')"  href="#"> Nameless Mangás</a>
+				</div>
+			</div>
+			<div class="col-md-4">
+				Social Medias
+				<ul class=" list-unstyled">
+					<li>				
+						<a href="#" class="fa fa-facebook"></a>
+					</li>
+					<li>				
+						<a href="#" class="fa fa-twitter"></a>
+					</li>
+					<li>				
+						<a href="#" class="fa fa-instagram"></a>
+					</li>
+				</ul>
+
+
+			</div>
+		</div>
+
+
+	</div>
 
 
 	<script src="js/jquery.min.js"></script>
@@ -98,32 +139,20 @@
 </html>
 
 <script>
-	mostrarPagina();
+
+	$(document).ready( function () {
+		mostrarPagina();
+	});
 
 	function mostrarPagina(pagina = "principal.html", elemento = "") {
 		$("#content").html("");
-		$("#content").load(pagina);
+		$("#content").load(pagina, function() {
+
+			if (elemento){
+				$('#'+elemento).toggle();
+			}
+		});
+
 	}
 
-	// function mudarTema(){		
-	// 	$("#changetheme").html("");
-	// 	var atual = document.getElementById("theme").getAttribute("href");
-	// 	var tema = "";
-	// 	var html = "";
-	// 	var button = "";
-
-	// 	if ( atual != "css/white.css" ){
-	// 		tema = "white.css";
-	// 		html = "Dark Mode";
-	// 		button = "btn btn-secondary btn-outline-dark";
-	// 	}else{
-	// 		tema = "black.css";
-	// 		html = "Light Mode";
-	// 		button = "btn btn-outline-primary";
-	// 	}
-
-	// 	document.getElementById("theme").setAttribute("href", "css/"+tema);
-	// 	document.getElementById("changeTheme").setAttribute("class", button);
-	// 	document.getElementById("changeTheme").innerHTML = html;
-	// }
 </script>
